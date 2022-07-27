@@ -9,5 +9,5 @@ token_T* init_token(char* str, int type){
     token_T* token = malloc(1*sizeof(struct TOKENS_STRUCT));
     token->value=str;
     token->type = type;
-    return token;
+    return token;//token
 }
