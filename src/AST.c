@@ -1,4 +1,4 @@
-#include "Include/AST.h"
+#include "include/AST.h"
 
 AST_T* init_ast(int type){
     AST_T* ast = malloc(1*sizeof(struct AST_STRUCT));

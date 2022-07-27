@@ -2,9 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "Include/IO.h"
-#include "Include/lexer.h"
-#include "Include/parser.h"
+#include "include/IO.h"
+#include "include/lexer.h"
+#include "include/parser.h"
 
 int main(int argc, char** argv){
     int len = strlen(argv[1]);

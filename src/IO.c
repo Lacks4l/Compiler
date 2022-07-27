@@ -1,4 +1,5 @@
-#include "Include/IO.h"
+#include "include/IO.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
