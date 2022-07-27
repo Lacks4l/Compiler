@@ -2,6 +2,8 @@
 
 AST_T* init_ast(int type){
     AST_T* ast = malloc(1*sizeof(struct AST_STRUCT));
+    ast->type = type;
+    
     // AST VARIABLE DEFINITION
     ast->variable_def_var_name = (void*)0;
     ast->variable_def_value = (void*)0;
@@ -11,7 +13,7 @@ AST_T* init_ast(int type){
 
     // AST FUNCTION CALL
     ast->function_call_name = (void*)0;
-    ast-> function_call_arguments = (void*)0;
+    ast->function_call_arguments = (void*)0;
     ast->function_call_argument_size = 0;
 
     // AST BASIC TYPES

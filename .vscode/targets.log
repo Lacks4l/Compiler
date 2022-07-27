@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 27 07:45:01 2022
+# Make data base, printed on Wed Jul 27 14:40:02 2022
 
 # Variables
 
@@ -73,7 +71,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXLoDMPj/agent.1271
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXbQANy9/agent.1221
 # default
 .SHELLFLAGS := -c
 # environment
@@ -87,7 +85,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3174
+VSCODE_PID = 3558
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard src/*.c)
 # environment
@@ -95,7 +93,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1221,unix/gurgi:/tmp/.ICE-unix/1221
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1171,unix/gurgi:/tmp/.ICE-unix/1171
 # automatic
 *F = $(notdir $*)
 # environment
@@ -173,7 +171,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 1272
+SSH_AGENT_PID = 1222
 # environment
 _ = /usr/bin/make
 # environment
@@ -231,9 +229,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # include: could not be stat'd.
 # src (device 66307, inode 50077698): 15 files, no impossibilities.
-# . (device 66307, inode 50077697): 9 files, no impossibilities.
+# . (device 66307, inode 50077697): 10 files, no impossibilities.
 
-# 24 files, no impossibilities in 3 directories.
+# 25 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -282,9 +280,11 @@ src/main.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 
 # Not a target:
- 
 src/IO.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -332,12 +332,12 @@ pacl.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 305 B / avg = 8 B
-# current buf: size = 8162 B / used = 305 B / count = 38 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 316 B / avg = 8 B
+# current buf: size = 8162 B / used = 316 B / count = 39 / avg = 8 B
 
-# strcache performance: lookups = 50 / hit rate = 24%
+# strcache performance: lookups = 51 / hit rate = 23%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=0/50=0%
-# Finished Make data base on Wed Jul 27 07:45:01 2022
+# Load=39/8192=0%, Rehash=0, Collisions=0/51=0%
+# Finished Make data base on Wed Jul 27 14:40:02 2022
 
  

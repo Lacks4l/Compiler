@@ -38,23 +38,6 @@ char* symbol_to_string(lexer_T* lexer){
     return str;
 }
 
-int get_token_type(char* token){
-    if(strcmp(token, "int")==0){
-        return 0;
-    }else if(strcmp(token, "bool")==0){
-        return 1;
-    }else if(strcmp(token, "string")==0){
-        return 2;
-    }else if(strcmp(token, "char")==0){
-        return 3;
-    }else if(isdigit(token[0])){
-        return 33;
-    }else if(isalpha(token[0])){
-        return 42;
-    }
-    return -1;
-}
-
 token_T* get_token(lexer_T* lexer){
     char* str = malloc(1*sizeof(char));
     str[0]='\0';
@@ -64,9 +47,7 @@ token_T* get_token(lexer_T* lexer){
         lexer_advance(lexer);
     }
 
-    printf("%s\n", str);
-
-    return init_token(str, get_token_type(str));
+    return init_token(str, TOKEN_IDENTIFIER);
 }
 
 token_T* lexer_collect_string(lexer_T* lexer){
@@ -90,6 +71,7 @@ token_T* lexer_collect_string(lexer_T* lexer){
     return init_token(str, TOKEN_STRINGCONST);
 }
 
+//Function Call for Lexer in Parser
 token_T* advance_lexer(lexer_T* lexer){
     while(lexer->c==' '||lexer->c==10){
         lexer_advance(lexer);
@@ -108,37 +90,38 @@ token_T* advance_lexer(lexer_T* lexer){
     }else{
         switch(lexer->c){
             //----------------- SYMBOLS -----------------------
-            case ';':return init_token(symbol_to_string(lexer), TOKEN_SEMICOLON);break;
-            case ':':return init_token(symbol_to_string(lexer), TOKEN_COLON);break;
-            case '(':return init_token(symbol_to_string(lexer), TOKEN_LPAREN);break;
-            case ')':return init_token(symbol_to_string(lexer), TOKEN_RPAREN);break;
-            case '[':return init_token(symbol_to_string(lexer), TOKEN_LBRACE);break;
-            case ']':return init_token(symbol_to_string(lexer), TOKEN_RBRACE);break;
-            case '{':return init_token(symbol_to_string(lexer), TOKEN_LBRACKET);break;
-            case '}':return init_token(symbol_to_string(lexer), TOKEN_RBRACKET);break;
-            case '\'':return init_token(symbol_to_string(lexer), TOKEN_TICK);break;
-            case '\"':return init_token(symbol_to_string(lexer), TOKEN_DITTO);break;
-            case '<':return init_token(symbol_to_string(lexer), TOKEN_LT);break;
-            case '>':return init_token(symbol_to_string(lexer), TOKEN_GT);break;
-            case '!':return init_token(symbol_to_string(lexer), TOKEN_BANG);break;
-            case '_':return init_token(symbol_to_string(lexer), TOKEN_UNDERSCORE);break;
-            case '/':return init_token(symbol_to_string(lexer), TOKEN_SLASH);break;
-            case '\\':return init_token(symbol_to_string(lexer), TOKEN_BACKSLASH);break;
-            case ',':return init_token(symbol_to_string(lexer), TOKEN_COMMA);break;
-            case '~':return init_token(symbol_to_string(lexer), TOKEN_TILDE);break;
-            case '`':return init_token(symbol_to_string(lexer), TOKEN_BACKTICK);break;
-            case '?':return init_token(symbol_to_string(lexer), TOKEN_QUESTION);break;
-            case '|':return init_token(symbol_to_string(lexer), TOKEN_PIPE);break;
-            case '&':return init_token(symbol_to_string(lexer), TOKEN_AMPERSAND);break;
-            case '@':return init_token(symbol_to_string(lexer), TOKEN_AT);break;
-            case '=':return init_token(symbol_to_string(lexer), TOKEN_EQUALS);break;
+            case ';':return init_token(symbol_to_string(lexer), TOKEN_SEMICOLON);
+            case ':':return init_token(symbol_to_string(lexer), TOKEN_COLON);
+            case '(':return init_token(symbol_to_string(lexer), TOKEN_LPAREN);
+            case ')':return init_token(symbol_to_string(lexer), TOKEN_RPAREN);
+            case '[':return init_token(symbol_to_string(lexer), TOKEN_LBRACE);
+            case ']':return init_token(symbol_to_string(lexer), TOKEN_RBRACE);
+            case '{':return init_token(symbol_to_string(lexer), TOKEN_LBRACKET);
+            case '}':return init_token(symbol_to_string(lexer), TOKEN_RBRACKET);
+            case '\'':return init_token(symbol_to_string(lexer), TOKEN_TICK);
+            case '\"':return init_token(symbol_to_string(lexer), TOKEN_DITTO);
+            case '<':return init_token(symbol_to_string(lexer), TOKEN_LT);
+            case '>':return init_token(symbol_to_string(lexer), TOKEN_GT);
+            case '!':return init_token(symbol_to_string(lexer), TOKEN_BANG);
+            case '_':return init_token(symbol_to_string(lexer), TOKEN_UNDERSCORE);
+            case '/':return init_token(symbol_to_string(lexer), TOKEN_SLASH);
+            case '\\':return init_token(symbol_to_string(lexer), TOKEN_BACKSLASH);
+            case ',':return init_token(symbol_to_string(lexer), TOKEN_COMMA);
+            case '~':return init_token(symbol_to_string(lexer), TOKEN_TILDE);
+            case '`':return init_token(symbol_to_string(lexer), TOKEN_BACKTICK);
+            case '?':return init_token(symbol_to_string(lexer), TOKEN_QUESTION);
+            case '|':return init_token(symbol_to_string(lexer), TOKEN_PIPE);
+            case '&':return init_token(symbol_to_string(lexer), TOKEN_AMPERSAND);
+            case '@':return init_token(symbol_to_string(lexer), TOKEN_AT);
+            case '=':return init_token(symbol_to_string(lexer), TOKEN_EQUALS);
 
             //----------------- MATH SYMBOLS -----------------------
-            case '+':return init_token(symbol_to_string(lexer), TOKEN_PLUS);break;
-            case '-':return init_token(symbol_to_string(lexer), TOKEN_MINUS);break;
-            case '*':return init_token(symbol_to_string(lexer), TOKEN_STAR);break;
-            case '%':return init_token(symbol_to_string(lexer), TOKEN_MOD);break;
-            case '^':return init_token(symbol_to_string(lexer), TOKEN_EXPONENT);break;  
+            case '+':return init_token(symbol_to_string(lexer), TOKEN_PLUS);
+            case '-':return init_token(symbol_to_string(lexer), TOKEN_MINUS);
+            case '*':return init_token(symbol_to_string(lexer), TOKEN_STAR);
+            case '%':return init_token(symbol_to_string(lexer), TOKEN_MOD);
+            case '^':return init_token(symbol_to_string(lexer), TOKEN_EXPONENT);  
+            default: printf("ERROR: Unrecognized symbol %s", lexer->c); exit(1);
         }
     }
     return (void*)0;

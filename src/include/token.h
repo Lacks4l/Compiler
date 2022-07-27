@@ -5,58 +5,60 @@ typedef struct TOKENS_STRUCT{
     enum token_type{
         /* TOKEN BASIC TYPES */
         TOKEN_INT,              //0
-        TOKEN_BOOL,             //1
-        TOKEN_STRING,           //2
-        TOKEN_CHAR,             //3
+        TOKEN_FLOAT,            //1
+        TOKEN_DOUBLE,           //2
+        TOKEN_BOOL,             //3
+        TOKEN_STRING,           //4
+        TOKEN_CHAR,             //5
 
         /* TOKEN SYMBOLS */
-        TOKEN_SEMICOLON,        //4
-        TOKEN_COLON,            //5
-        TOKEN_LPAREN,           //6
-        TOKEN_RPAREN,           //7
-        TOKEN_LBRACE,           //8
-        TOKEN_RBRACE,           //9
-        TOKEN_LBRACKET,         //10
-        TOKEN_RBRACKET,         //11
-        TOKEN_TICK,             //12
-        TOKEN_DITTO,            //13
-        TOKEN_GT,               //14
-        TOKEN_LT,               //15
-        TOKEN_BANG,             //16
-        TOKEN_UNDERSCORE,       //17
-        TOKEN_SLASH,            //18
-        TOKEN_BACKSLASH,        //19
-        TOKEN_COMMA,            //20
-        TOKEN_TILDE,            //21
-        TOKEN_BACKTICK,         //22
-        TOKEN_QUESTION,         //23
-        TOKEN_PIPE,             //24
-        TOKEN_AMPERSAND,        //25
-        TOKEN_AT,               //26
-        TOKEN_EQUALS,           //27
+        TOKEN_SEMICOLON,        //6
+        TOKEN_COLON,            //7
+        TOKEN_LPAREN,           //8
+        TOKEN_RPAREN,           //9
+        TOKEN_LBRACE,           //10
+        TOKEN_RBRACE,           //11
+        TOKEN_LBRACKET,         //12
+        TOKEN_RBRACKET,         //13
+        TOKEN_TICK,             //14
+        TOKEN_DITTO,            //15
+        TOKEN_GT,               //16
+        TOKEN_LT,               //17
+        TOKEN_BANG,             //18
+        TOKEN_UNDERSCORE,       //19
+        TOKEN_SLASH,            //20
+        TOKEN_BACKSLASH,        //21
+        TOKEN_COMMA,            //22
+        TOKEN_TILDE,            //23
+        TOKEN_BACKTICK,         //24
+        TOKEN_QUESTION,         //25
+        TOKEN_PIPE,             //26
+        TOKEN_AMPERSAND,        //27
+        TOKEN_AT,               //28
+        TOKEN_EQUALS,           //29
 
         /* TOKEN MATH SYMBOLS */
-        TOKEN_PLUS,             //28
-        TOKEN_MINUS,            //29
-        TOKEN_STAR,             //30
-        TOKEN_MOD,              //31
-        TOKEN_EXPONENT,         //32
+        TOKEN_PLUS,             //30
+        TOKEN_MINUS,            //31
+        TOKEN_STAR,             //32
+        TOKEN_MOD,              //33
+        TOKEN_EXPONENT,         //34
 
         /* TOKEN TYPE CONSTANTS */
-        TOKEN_INTCONST,         //33
-        TOKEN_FLOATCONST,       //34  
-        TOKEN_DOUBLECONST,      //35    
-        TOKEN_STRINGCONST,      //36    
-        TOKEN_CHARCONST,        //37    
-        TOKEN_BOOLTYPE,         //38
+        TOKEN_INTCONST,         //35
+        TOKEN_FLOATCONST,       //36  
+        TOKEN_DOUBLECONST,      //37    
+        TOKEN_STRINGCONST,      //38    
+        TOKEN_CHARCONST,        //39    
+        TOKEN_BOOLTYPE,         //40
 
         /* TOKEN COMPLEX DATA TYPE */
-        TOKEN_STRUCT,           //39
-        TOKEN_ENUM,             //40
-        TOKEN_VECTOR,           //41
+        TOKEN_STRUCT,           //41
+        TOKEN_ENUM,             //42
+        TOKEN_VECTOR,           //43
 
         /* OTHER */
-        TOKEN_IDENTIFIER        //42
+        TOKEN_IDENTIFIER        //44
     }type;
     char* value;
 

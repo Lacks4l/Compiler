@@ -5,11 +5,22 @@
 
 typedef struct AST_STRUCT{
     enum{
+        //FUNCTION TYPES
+        AST_FUNCTION_CALL,
+
+        //VARIABLE TYPES
         AST_VARIABLE_DEFINITION,
         AST_VARIABLE,
-        AST_FUNCTION_CALL,
-        AST_STRING,
+
+        //BASIC TYPES
         AST_INT,
+        AST_FLOAT,
+        AST_DOUBLE,
+        AST_BOOL,
+        AST_STRING,
+        AST_CHAR,
+
+        //COMPOUND TYPES
         AST_COMP0UND
     }type;
 
@@ -27,6 +38,8 @@ typedef struct AST_STRUCT{
 
     // AST BASIC TYPES
     char* int_value;
+    char* float_value;
+    char* double_value;
     char* bool_value;
     char* string_value;
     char* char_value;
