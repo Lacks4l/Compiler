@@ -58,11 +58,13 @@ int get_token_type(char* token){
 token_T* get_token(lexer_T* lexer){
     char* str = malloc(1*sizeof(char));
     str[0]='\0';
-    while(isalnum(lexer->c)){
+    while(isalnum(lexer->c)||lexer->c=='_'){
         str = realloc(str, (strlen(str)+strlen(to_string(lexer))+1)*sizeof(char));
         strcat(str, to_string(lexer));
         lexer_advance(lexer);
     }
+
+    printf("%s\n", str);
 
     return init_token(str, get_token_type(str));
 }
@@ -84,7 +86,6 @@ token_T* lexer_collect_string(lexer_T* lexer){
         lexer_advance(lexer);
         return init_token(str, TOKEN_CHARCONST);
     }
-    printf("%s", str);
 
     return init_token(str, TOKEN_STRINGCONST);
 }

@@ -1,11 +1,11 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/lacksal/git/programming/WIP/PACL'
-cc    -c -o src/AST.o src/AST.c
-cc    -c -o src/IO.o src/IO.c
-cc    -c -o src/lexer.o src/lexer.c
+gcc -c -g src/AST.c -o src/AST.o
+gcc -c -g src/IO.c -o src/IO.o
+gcc -c -g src/lexer.c -o src/lexer.o
 cc    -c -o src/main.o src/main.c
-cc    -c -o src/parser.o src/parser.c
-cc    -c -o src/token.o src/token.c
+gcc -c -g src/parser.c -o src/parser.o
+gcc -c -g src/token.c -o src/token.o
 gcc src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o -g -o pacl.out
 make: Leaving directory '/home/lacksal/git/programming/WIP/PACL'
  
