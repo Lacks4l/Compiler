@@ -1,0 +1,343 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue Jul 26 21:11:30 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+LC_NAME = en_US.UTF-8
+# environment
+LC_NUMERIC = en_US.UTF-8
+# environment
+VSCODE_CWD = /home/lacksal
+# environment
+LC_ADDRESS = en_US.UTF-8
+# environment
+GDM_LANG = en_US.utf8
+# default
+MAKE_COMMAND := make
+# environment
+GTK3_MODULES = xapp-gtk3-module:xapp-gtk3-module
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/lacksal/git/programming/WIP/PACL
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/lacksal
+# environment
+XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/usr/share
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/lacksal/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/lacksal/git/programming/WIP/PACL
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXwTlfo4/agent.1259
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = xfce
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 17668
+# makefile (from 'Makefile', line 2)
+sources = $(wildcard src/*.c)
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1209,unix/gurgi:/tmp/.ICE-unix/1209
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# makefile (from 'Makefile', line 3)
+objects = $(sources:.c=.o)
+# environment
+SHLVL = 1
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/lacksal/.cargo/bin:/home/lacksal/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+# default
+MAKEFILES := 
+# environment
+LC_MONETARY = en_US.UTF-8
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = en_US.UTF-8
+# environment
+LC_TELEPHONE = en_US.UTF-8
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 1)
+exec = pacl.out
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = xfce
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = lacksal
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := pacl.out
+# environment
+EDITOR = /usr/bin/nano
+# environment
+DISPLAY = :0.0
+# environment
+GTK_MODULES = canberra-gtk-module:canberra-gtk-module
+# environment
+USER = lacksal
+# default
+MAKE_VERSION := 4.3
+# environment
+LC_MEASUREMENT = en_US.UTF-8
+# environment
+SSH_AGENT_PID = 1260
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = en_US.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /home/lacksal/.gtkrc-2.0
+# environment
+HOME = /home/lacksal
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.69.2-main.sock
+# environment
+XDG_SESSION_ID = 2
+# environment
+PANEL_GDK_CORE_DEVICE_EVENTS = 0
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/lacksal
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# environment
+XDG_MENU_PREFIX = xfce-
+# makefile (from 'Makefile', line 4)
+flags = -g
+# environment
+GDMSESSION = xfce
+# environment
+LC_IDENTIFICATION = en_US.UTF-8
+# variable set hash-table stats:
+# Load=104/1024=10%, Rehash=0, Collisions=7/137=5%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# include: could not be stat'd.
+# src (device 66307, inode 50077698): 15 files, no impossibilities.
+# . (device 66307, inode 50077697): 7 files, no impossibilities.
+
+# 22 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+%.o: %.c include/%.h
+#  recipe to execute (from 'Makefile', line 11):
+	gcc -c $(flags) $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-21 20:16:42.065790378
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 18):
+	-rm *.out 
+	-rm src/*.o
+
+# Not a target:
+src/AST.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/lexer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/IO.o:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/token.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parser.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+install:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 14):
+	make
+	cp ./pacl.out /usr/local/bin/pacl
+
+pacl.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+	gcc $(objects) $(flags) -o $(exec)
+
+# files hash-table stats:
+# Load=13/1024=1%, Rehash=0, Collisions=2/29=7%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 37 / storage = 298 B / avg = 8 B
+# current buf: size = 8162 B / used = 298 B / count = 37 / avg = 8 B
+
+# strcache performance: lookups = 48 / hit rate = 22%
+# hash-table stats:
+# Load=37/8192=0%, Rehash=0, Collisions=0/48=0%
+# Finished Make data base on Tue Jul 26 21:11:30 2022
+
+ 
