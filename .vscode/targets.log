@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 25 09:00:59 2022
+# Make data base, printed on Thu Aug 25 11:45:38 2022
 
 # Variables
 
@@ -65,7 +67,7 @@ MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/lacksal/git/programming/WIP/PACL
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -85,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 2894
+VSCODE_PID = 16265
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard src/*.c)
 # environment
@@ -227,9 +229,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # include: could not be stat'd.
 # src (device 66307, inode 50077698): 15 files, no impossibilities.
-# . (device 66307, inode 50077697): 11 files, no impossibilities.
+# . (device 66307, inode 50077697): 12 files, no impossibilities.
 
-# 26 files, no impossibilities in 3 directories.
+# 27 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -243,7 +245,7 @@ LC_IDENTIFICATION = en_US.UTF-8
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-24 10:46:45.514266302
+#  Last modified 2022-08-25 09:35:09.233601448
 #  File has been updated.
 #  Successfully updated.
 
@@ -280,10 +282,8 @@ src/main.o:
 #  File has not been updated.
 
 # Not a target:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 src/IO.o:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -337,12 +337,12 @@ pacl.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 41 / storage = 329 B / avg = 8 B
-# current buf: size = 8162 B / used = 329 B / count = 41 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 42 / storage = 339 B / avg = 8 B
+# current buf: size = 8162 B / used = 339 B / count = 42 / avg = 8 B
 
-# strcache performance: lookups = 54 / hit rate = 24%
+# strcache performance: lookups = 55 / hit rate = 23%
 # hash-table stats:
-# Load=41/8192=1%, Rehash=0, Collisions=0/54=0%
-# Finished Make data base on Thu Aug 25 09:00:59 2022
+# Load=42/8192=1%, Rehash=0, Collisions=0/55=0%
+# Finished Make data base on Thu Aug 25 11:45:38 2022
 
  
