@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 27 14:40:02 2022
+# Make data base, printed on Thu Aug 25 09:00:59 2022
 
 # Variables
 
@@ -49,7 +49,7 @@ XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpa
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -71,7 +71,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXbQANy9/agent.1221
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXiLikI3/agent.1320
 # default
 .SHELLFLAGS := -c
 # environment
@@ -85,7 +85,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3558
+VSCODE_PID = 2894
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard src/*.c)
 # environment
@@ -93,7 +93,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1171,unix/gurgi:/tmp/.ICE-unix/1171
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1269,unix/gurgi:/tmp/.ICE-unix/1269
 # automatic
 *F = $(notdir $*)
 # environment
@@ -171,7 +171,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 1222
+SSH_AGENT_PID = 1321
 # environment
 _ = /usr/bin/make
 # environment
@@ -189,11 +189,9 @@ HOME = /home/lacksal
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.69.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.70.2-main.sock
 # environment
 XDG_SESSION_ID = 2
-# environment
-PANEL_GDK_CORE_DEVICE_EVENTS = 0
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -219,7 +217,7 @@ GDMSESSION = xfce
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=104/1024=10%, Rehash=0, Collisions=7/137=5%
+# Load=103/1024=10%, Rehash=0, Collisions=7/136=5%
 
 # Pattern-specific Variable Values
 
@@ -229,14 +227,14 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # include: could not be stat'd.
 # src (device 66307, inode 50077698): 15 files, no impossibilities.
-# . (device 66307, inode 50077697): 10 files, no impossibilities.
+# . (device 66307, inode 50077697): 11 files, no impossibilities.
 
-# 25 files, no impossibilities in 3 directories.
+# 26 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 %.o: %.c include/%.h
-#  recipe to execute (from 'Makefile', line 11):
+#  recipe to execute (from 'Makefile', line 13):
 	gcc -c $(flags) $< -o $@
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -245,7 +243,7 @@ LC_IDENTIFICATION = en_US.UTF-8
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-21 20:16:42.065790378
+#  Last modified 2022-08-24 10:46:45.514266302
 #  File has been updated.
 #  Successfully updated.
 
@@ -253,7 +251,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 18):
+#  recipe to execute (from 'Makefile', line 20):
 	-rm *.out 
 	-rm src/*.o
 
@@ -280,11 +278,11 @@ src/main.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
  
 make: *** No rule to make target 'all'.  Stop.
 
-
-# Not a target:
 src/IO.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -309,11 +307,16 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+link:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 install:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 14):
+#  recipe to execute (from 'Makefile', line 16):
 	make
 	cp ./pacl.out /usr/local/bin/pacl
 
@@ -323,21 +326,23 @@ pacl.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
 	gcc $(objects) $(flags) -o $(exec)
+	rm bin.txt
+	xxd -b $(exec) > bin.txt
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=2/29=7%
+# Load=14/1024=1%, Rehash=0, Collisions=2/30=7%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 316 B / avg = 8 B
-# current buf: size = 8162 B / used = 316 B / count = 39 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 329 B / avg = 8 B
+# current buf: size = 8162 B / used = 329 B / count = 41 / avg = 8 B
 
-# strcache performance: lookups = 51 / hit rate = 23%
+# strcache performance: lookups = 54 / hit rate = 24%
 # hash-table stats:
-# Load=39/8192=0%, Rehash=0, Collisions=0/51=0%
-# Finished Make data base on Wed Jul 27 14:40:02 2022
+# Load=41/8192=1%, Rehash=0, Collisions=0/54=0%
+# Finished Make data base on Thu Aug 25 09:00:59 2022
 
  

@@ -7,5 +7,7 @@ cc    -c -o src/main.o src/main.c
 gcc -c -g src/parser.c -o src/parser.o
 gcc -c -g src/token.c -o src/token.o
 gcc src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o -g -o pacl.out
+rm bin.txt
+xxd -b pacl.out > bin.txt
 make: Leaving directory '/home/lacksal/git/programming/WIP/PACL'
  
