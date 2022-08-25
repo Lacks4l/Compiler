@@ -55,16 +55,15 @@ token_T* lexer_collect_string(lexer_T* lexer){
 
     char* str = malloc(1*sizeof(char));
     str[0] = '\0';
-    while(lexer->c!=34 && lexer->c!=39){
+    
+    while(lexer->c!='\"'){
         char* s = to_string(lexer);
         str = realloc(str, (strlen(str)+strlen(s)+1)*sizeof(char));
         strcat(str, s);
         lexer_advance(lexer);
-        if(lexer->c==34){
-            return init_token(str, TOKEN_STRINGCONST);
-            break;
-        }
     }
+
+    lexer_advance(lexer);
     
     if(lexer->contents[lexer->i+1]=='\''){
         lexer_advance(lexer);
@@ -72,6 +71,10 @@ token_T* lexer_collect_string(lexer_T* lexer){
     }
 
     return init_token(str, TOKEN_STRINGCONST);
+}
+
+token_T* lexer_collect_char(lexer_T* lexer){
+    
 }
 
 //Function Call for Lexer in Parser
