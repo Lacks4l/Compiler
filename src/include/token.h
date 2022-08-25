@@ -50,7 +50,7 @@ typedef struct TOKENS_STRUCT{
         TOKEN_DOUBLECONST,      //37    
         TOKEN_STRINGCONST,      //38    
         TOKEN_CHARCONST,        //39    
-        TOKEN_BOOLTYPE,         //40
+        TOKEN_BOOLCONST,        //40
 
         /* TOKEN COMPLEX DATA TYPE */
         TOKEN_STRUCT,           //41

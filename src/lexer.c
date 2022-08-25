@@ -55,14 +55,17 @@ token_T* lexer_collect_string(lexer_T* lexer){
 
     char* str = malloc(1*sizeof(char));
     str[0] = '\0';
-
-    while(lexer->c!='\"'&&lexer->c!='\''){
+    while(lexer->c!=34 && lexer->c!=39){
         char* s = to_string(lexer);
         str = realloc(str, (strlen(str)+strlen(s)+1)*sizeof(char));
         strcat(str, s);
         lexer_advance(lexer);
+        if(lexer->c==34){
+            return init_token(str, TOKEN_STRINGCONST);
+            break;
+        }
     }
-
+    
     if(lexer->contents[lexer->i+1]=='\''){
         lexer_advance(lexer);
         return init_token(str, TOKEN_CHARCONST);
@@ -121,6 +124,7 @@ token_T* advance_lexer(lexer_T* lexer){
             case '*':return init_token(symbol_to_string(lexer), TOKEN_STAR);
             case '%':return init_token(symbol_to_string(lexer), TOKEN_MOD);
             case '^':return init_token(symbol_to_string(lexer), TOKEN_EXPONENT);  
+            case 0: exit(EXIT_SUCCESS);
             default: printf("ERROR: Unrecognized symbol %s", lexer->c); exit(1);
         }
     }

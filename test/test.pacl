@@ -1,3 +1,2 @@
-int num_are_cool = 50;
-
-print(num);
+int this_is_cool = 5;
+string test = "Hello";
