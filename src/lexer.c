@@ -41,7 +41,7 @@ char* symbol_to_string(lexer_T* lexer){
 token_T* get_token(lexer_T* lexer){
     char* str = malloc(1*sizeof(char));
     str[0]='\0';
-    while(isalnum(lexer->c)||lexer->c=='_'){
+    while(isalnum(lexer->c)||lexer->c=='_'||lexer->c=='.'){
         str = realloc(str, (strlen(str)+strlen(to_string(lexer))+1)*sizeof(char));
         strcat(str, to_string(lexer));
         lexer_advance(lexer);
@@ -56,7 +56,7 @@ token_T* lexer_collect_string(lexer_T* lexer){
     char* str = malloc(1*sizeof(char));
     str[0] = '\0';
     
-    while(lexer->c!='\"'){
+    while(lexer->c!='\"' && lexer->c!='\''){
         char* s = to_string(lexer);
         str = realloc(str, (strlen(str)+strlen(s)+1)*sizeof(char));
         strcat(str, s);
@@ -64,17 +64,8 @@ token_T* lexer_collect_string(lexer_T* lexer){
     }
 
     lexer_advance(lexer);
-    
-    if(lexer->contents[lexer->i+1]=='\''){
-        lexer_advance(lexer);
-        return init_token(str, TOKEN_CHARCONST);
-    }
 
-    return init_token(str, TOKEN_STRINGCONST);
-}
-
-token_T* lexer_collect_char(lexer_T* lexer){
-    
+    return strlen(str)==2?init_token(str, TOKEN_CHARCONST):init_token(str, TOKEN_STRINGCONST);
 }
 
 //Function Call for Lexer in Parser

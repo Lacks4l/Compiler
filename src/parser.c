@@ -14,8 +14,8 @@ parser_T* init_parser(lexer_T* lexer){
 }
 
 void parser_eat(parser_T* parser, int token_type){
-    printf("%s\n", parser->current_token->value);
-    if(parser->current_token->type==token_type){
+    printf("%s, %d\n", parser->current_token->value, parser->current_token->type);
+    if(parser->current_token->type==token_type){    
         parser->current_token = advance_lexer(parser->lexer);
     }else{
         printf("Unexpected token %s with type %d", parser->current_token->value, parser->current_token->type);
