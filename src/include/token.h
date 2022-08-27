@@ -1,5 +1,8 @@
-#ifndef TOKEN_H
-#define TOKEN_G
+#ifndef PACL_TOKEN_H
+#define PACL_TOKEN_H
+
+#define CHAR_NEWLINE '\n'
+#define CHAR_TAB '\t'
 
 typedef struct TOKENS_STRUCT{
     enum token_type{
@@ -66,4 +69,4 @@ typedef struct TOKENS_STRUCT{
 
 token_T* init_token(char* str, int type);
 
-#endif /* TOKEN__H */
+#endif /* TPACL_OKEN__H */

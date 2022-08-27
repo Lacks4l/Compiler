@@ -1,23 +1,24 @@
-#ifndef LEXER_H
-#define LEXER_H
+#ifndef PACL_LEXER_H
+#define PACL_LEXER_H
 
 #include "token.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct LEXER_STRUCT{
     char* contents;
+    size_t contents_size;
     char c;
-    int i;
+    unsigned int i;
 }lexer_T;
 
 lexer_T* init_lexer(char* buff);
 
 void lexer_skip(lexer_T* lexer);
-int ischar(char c);
-token_T* advance_lexer(lexer_T* lexer);
-void lexer(char* file_name);
+char* to_string(lexer_T* lexer);
+char* symbol_to_string(lexer_T* lexer);
+token_T* lexer_get_token(lexer_T* lexer);
+token_T* lexer_collect_string(lexer_T* lexer);
+token_T* advance_lexer(lexer_T* lexer); //Function call for lexer in other files
 
-
-void file_print(token_T* token, FILE* fptr);
-
-#endif /* LEXER_H */
+#endif /* PACL_LEXER_H */

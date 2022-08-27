@@ -1,13 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/lacksal/git/programming/WIP/PACL'
-gcc -c -g src/AST.c -o src/AST.o
-gcc -c -g src/IO.c -o src/IO.o
-gcc -c -g src/lexer.c -o src/lexer.o
-cc    -c -o src/main.o src/main.c
-gcc -c -g src/parser.c -o src/parser.o
-gcc -c -g src/token.c -o src/token.o
-gcc src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o -g -o pacl.out
-rm bin.txt
-xxd -b pacl.out > bin.txt
+make: 'a.out' is up to date.
 make: Leaving directory '/home/lacksal/git/programming/WIP/PACL'
  

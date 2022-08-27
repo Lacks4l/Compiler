@@ -1,4 +1,4 @@
-double this_is_cool = 5.4;
+float this_is_cool = 4.4;
 string test = "LACKSAL";
 int num = 10;
 char thing = 'c';

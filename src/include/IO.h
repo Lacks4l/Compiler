@@ -1,6 +1,6 @@
-#ifndef IO_H
-#define IO_H
+#ifndef PACL_IO_H
+#define PACL_IO_H
 
 char* read_file(char* file_name);
 
-#endif
+#endif /* PACL_IO_H */

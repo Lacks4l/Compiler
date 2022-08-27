@@ -68,9 +68,7 @@ AST_T* parser_parse_int(parser_T* parser){
 
 
     parser_eat(parser, TOKEN_INTCONST);
-    //printf("%s\n", parser->current_token->value);
     
-
     return ast_int;
 }
 
@@ -160,10 +158,6 @@ AST_T* parser_parse_variable_def(parser_T* parser){
     return variable_definition;
 }
 
-AST_T* parser_parse_function_call(parser_T* parser){
-
-}
-
 AST_T* parser_parse_variable(parser_T* parser){
     char* token_value = parser->current_token->value;
     parser_eat(parser, TOKEN_IDENTIFIER);
@@ -176,4 +170,8 @@ AST_T* parser_parse_variable(parser_T* parser){
     ast_variable->variable_name = token_value;
 
     return ast_variable;
+}
+
+AST_T* parser_parse_function_call(parser_T* parser){
+
 }

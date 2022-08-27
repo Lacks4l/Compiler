@@ -1,5 +1,5 @@
-#ifndef AST_H
-#define AST_H
+#ifndef PACL_AST_H
+#define PACL_AST_H
 
 #include <stdlib.h>
 
@@ -52,4 +52,4 @@ typedef struct AST_STRUCT{
 
 AST_T* init_ast(int type);
 
-#endif /* AST_H */
+#endif /* PACL_AST_H */

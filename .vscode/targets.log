@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 25 11:45:38 2022
+# Make data base, printed on Sat Aug 27 15:10:46 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpa
 # environment
 VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session3
 # environment
 LANG = C
 # environment
@@ -73,7 +73,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXiLikI3/agent.1320
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXX63U0AY/agent.10961
 # default
 .SHELLFLAGS := -c
 # environment
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 16265
+VSCODE_PID = 13940
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard src/*.c)
 # environment
@@ -95,7 +95,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1269,unix/gurgi:/tmp/.ICE-unix/1269
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/10935,unix/gurgi:/tmp/.ICE-unix/10935
 # automatic
 *F = $(notdir $*)
 # environment
@@ -139,7 +139,7 @@ LC_TELEPHONE = en_US.UTF-8
 # automatic
 ?F = $(notdir $?)
 # makefile (from 'Makefile', line 1)
-exec = pacl.out
+exec = a.out
 # environment
 XDG_SEAT = seat0
 # environment
@@ -159,7 +159,7 @@ LOGNAME = lacksal
 # environment
 XDG_VTNR = 7
 # makefile
-.DEFAULT_GOAL := pacl.out
+.DEFAULT_GOAL := a.out
 # environment
 EDITOR = /usr/bin/nano
 # environment
@@ -173,7 +173,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 1321
+SSH_AGENT_PID = 10962
 # environment
 _ = /usr/bin/make
 # environment
@@ -193,7 +193,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.70.2-main.sock
 # environment
-XDG_SESSION_ID = 2
+XDG_SESSION_ID = 12
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -229,9 +229,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # include: could not be stat'd.
 # src (device 66307, inode 50077698): 15 files, no impossibilities.
-# . (device 66307, inode 50077697): 12 files, no impossibilities.
+# . (device 66307, inode 50077697): 11 files, no impossibilities.
 
-# 27 files, no impossibilities in 3 directories.
+# 26 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -245,11 +245,12 @@ LC_IDENTIFICATION = en_US.UTF-8
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-25 09:35:09.233601448
+#  Last modified 2022-08-27 15:09:54.601813396
 #  File has been updated.
 #  Successfully updated.
 
 clean:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -283,7 +284,6 @@ src/main.o:
 
 # Not a target:
 src/IO.o:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -318,16 +318,16 @@ install:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 16):
 	make
-	cp ./pacl.out /usr/local/bin/pacl
+	cp ./a.out /usr/local/bin/pacl
 
-pacl.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
+a.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
 	gcc $(objects) $(flags) -o $(exec)
 	rm bin.txt
-	xxd -b $(exec) > bin.txt
+	xxd -b $(exec) >> bin.txt
 
 # files hash-table stats:
 # Load=14/1024=1%, Rehash=0, Collisions=2/30=7%
@@ -337,12 +337,12 @@ pacl.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 42 / storage = 339 B / avg = 8 B
-# current buf: size = 8162 B / used = 339 B / count = 42 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 326 B / avg = 7 B
+# current buf: size = 8162 B / used = 326 B / count = 41 / avg = 7 B
 
-# strcache performance: lookups = 55 / hit rate = 23%
+# strcache performance: lookups = 54 / hit rate = 24%
 # hash-table stats:
-# Load=42/8192=1%, Rehash=0, Collisions=0/55=0%
-# Finished Make data base on Thu Aug 25 11:45:38 2022
+# Load=41/8192=1%, Rehash=0, Collisions=0/54=0%
+# Finished Make data base on Sat Aug 27 15:10:46 2022
 
  

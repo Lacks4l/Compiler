@@ -1,5 +1,5 @@
-#ifndef PARSER_H
-#define PARSER_H
+#ifndef PACL_PARSER_H
+#define PACL_PARSER_H
 
 #include "lexer.h"
 #include "AST.h"
@@ -18,12 +18,14 @@ void parser_eat(parser_T* parser, int token_type);
 AST_T* parser_parse(parser_T* parser);
 AST_T* parser_parse_statement(parser_T* parser);
 AST_T* parser_parse_statements(parser_T* parser);
-AST_T* parser_parse_expression(parser_T* parser);
 
 AST_T* parser_parse_identifier(parser_T* parser);
 
 AST_T* parser_parse_variable_def(parser_T* parser);
 AST_T* parser_parse_variable(parser_T* parser);
+
+parser_T* parser_parse_term(parser_T* parser);
+AST_T* parser_parse_expression(parser_T* parser);
 
 AST_T* parser_parse_function_call(parser_T* parser);
 
@@ -33,4 +35,4 @@ AST_T* parser_parse_double(parser_T* parser);
 AST_T* parser_parse_bool(parser_T* parser);
 AST_T* parser_parse_string(parser_T* parser);
 AST_T* parser_parse_char(parser_T* parser);
-#endif /* PARSER_H */
+#endif /* PACL_PARSER_H */
