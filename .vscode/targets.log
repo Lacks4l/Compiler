@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 27 15:10:46 2022
+# Make data base, printed on Sun Aug 28 09:23:09 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpa
 # environment
 VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session3
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
 LANG = C
 # environment
@@ -73,7 +73,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXX63U0AY/agent.10961
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXX81IqtN/agent.1297
 # default
 .SHELLFLAGS := -c
 # environment
@@ -87,15 +87,15 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 13940
+VSCODE_PID = 1838
 # makefile (from 'Makefile', line 2)
-sources = $(wildcard src/*.c)
+sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/10935,unix/gurgi:/tmp/.ICE-unix/10935
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1246,unix/gurgi:/tmp/.ICE-unix/1246
 # automatic
 *F = $(notdir $*)
 # environment
@@ -173,7 +173,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 10962
+SSH_AGENT_PID = 1298
 # environment
 _ = /usr/bin/make
 # environment
@@ -193,7 +193,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.70.2-main.sock
 # environment
-XDG_SESSION_ID = 12
+XDG_SESSION_ID = 2
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -227,11 +227,14 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
+# core (device 66307, inode 50727975): 9 files, no impossibilities.
 # include: could not be stat'd.
-# src (device 66307, inode 50077698): 15 files, no impossibilities.
-# . (device 66307, inode 50077697): 11 files, no impossibilities.
+# . (device 66307, inode 50077697): 13 files, no impossibilities.
+# core/compiler (device 66307, inode 50727969): 12 files, no impossibilities.
+# core/IO (device 66307, inode 50728185): 5 files, no impossibilities.
+# core/preprocessor (device 66307, inode 50727970): 5 files, no impossibilities.
 
-# 26 files, no impossibilities in 3 directories.
+# 44 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
@@ -243,35 +246,34 @@ LC_IDENTIFICATION = en_US.UTF-8
 # Files
 
 # Not a target:
+core/IO/ReadWrite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-27 15:09:54.601813396
+#  Last modified 2022-08-28 09:22:48.882506718
 #  File has been updated.
 #  Successfully updated.
 
+# Not a target:
+core/compiler/AST.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 clean:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 20):
 	-rm *.out 
-	-rm src/*.o
+	-rm $(objects)/*.o
 
 # Not a target:
-src/AST.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/lexer.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/main.o:
+core/compiler/lexer.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -280,22 +282,11 @@ src/main.o:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 # Not a target:
-src/IO.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/token.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/parser.o:
+core/preprocessor/preprocessor.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -312,6 +303,18 @@ link:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+core/compiler/parser.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 install:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -320,7 +323,7 @@ install:
 	make
 	cp ./a.out /usr/local/bin/pacl
 
-a.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
+a.out: main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/parser.o core/compiler/token.o core/preprocessor/preprocessor.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -329,20 +332,26 @@ a.out: src/AST.o src/IO.o src/lexer.o src/main.o src/parser.o src/token.o
 	rm bin.txt
 	xxd -b $(exec) >> bin.txt
 
+# Not a target:
+core/compiler/token.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=2/30=7%
+# Load=15/1024=1%, Rehash=0, Collisions=0/32=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 41 / storage = 326 B / avg = 7 B
-# current buf: size = 8162 B / used = 326 B / count = 41 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 55 / storage = 568 B / avg = 10 B
+# current buf: size = 8162 B / used = 568 B / count = 55 / avg = 10 B
 
-# strcache performance: lookups = 54 / hit rate = 24%
+# strcache performance: lookups = 76 / hit rate = 27%
 # hash-table stats:
-# Load=41/8192=1%, Rehash=0, Collisions=0/54=0%
-# Finished Make data base on Sat Aug 27 15:10:46 2022
+# Load=55/8192=1%, Rehash=0, Collisions=0/76=0%
+# Finished Make data base on Sun Aug 28 09:23:09 2022
 
  

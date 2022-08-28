@@ -2,10 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "include/IO.h"
-#include "include/lexer.h"
-#include "include/parser.h"
-#include "include/AST.h"
+#include "core/IO.h"
+#include "core/Compiler.h"
 
 int main(int argc, char** argv){
     int len = strlen(argv[1]);

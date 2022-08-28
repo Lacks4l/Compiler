@@ -1,5 +1,5 @@
 exec = a.out
-sources = $(wildcard src/*.c)
+sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 objects = $(sources:.c=.o)
 flags = -g
 
@@ -18,6 +18,6 @@ install:
 
 clean:
 	-rm *.out 
-	-rm src/*.o
+	-rm $(objects)/*.o
 
 link: 
