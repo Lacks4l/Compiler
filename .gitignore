@@ -1,4 +1,4 @@
-src/*.o
-pacl.out
+core/**/*.o
+a.out
 
 .vscode/

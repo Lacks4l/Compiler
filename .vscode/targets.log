@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 28 09:23:09 2022
+# Make data base, printed on Sun Aug 28 22:11:43 2022
 
 # Variables
 
@@ -73,7 +73,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXX81IqtN/agent.1297
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXfPddmT/agent.1443
 # default
 .SHELLFLAGS := -c
 # environment
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 1838
+VSCODE_PID = 3335
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 # environment
@@ -95,7 +95,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1246,unix/gurgi:/tmp/.ICE-unix/1246
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1392,unix/gurgi:/tmp/.ICE-unix/1392
 # automatic
 *F = $(notdir $*)
 # environment
@@ -173,7 +173,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 1298
+SSH_AGENT_PID = 1444
 # environment
 _ = /usr/bin/make
 # environment
@@ -229,12 +229,12 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # core (device 66307, inode 50727975): 9 files, no impossibilities.
 # include: could not be stat'd.
-# . (device 66307, inode 50077697): 13 files, no impossibilities.
-# core/compiler (device 66307, inode 50727969): 12 files, no impossibilities.
+# . (device 66307, inode 50077697): 11 files, no impossibilities.
+# core/compiler (device 66307, inode 50727969): 8 files, no impossibilities.
 # core/IO (device 66307, inode 50728185): 5 files, no impossibilities.
 # core/preprocessor (device 66307, inode 50727970): 5 files, no impossibilities.
 
-# 44 files, no impossibilities in 6 directories.
+# 38 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
@@ -254,7 +254,7 @@ core/IO/ReadWrite.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-28 09:22:48.882506718
+#  Last modified 2022-08-28 22:08:54.050088497
 #  File has been updated.
 #  Successfully updated.
 
@@ -270,7 +270,7 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 20):
 	-rm *.out 
-	-rm $(objects)/*.o
+	-rm $(objects)
 
 # Not a target:
 core/compiler/lexer.o:
@@ -282,7 +282,6 @@ core/compiler/lexer.o:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
@@ -323,6 +322,7 @@ install:
 	make
 	cp ./a.out /usr/local/bin/pacl
 
+ 
 a.out: main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/parser.o core/compiler/token.o core/preprocessor/preprocessor.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -346,12 +346,12 @@ core/compiler/token.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 55 / storage = 568 B / avg = 10 B
-# current buf: size = 8162 B / used = 568 B / count = 55 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 50 / storage = 533 B / avg = 10 B
+# current buf: size = 8162 B / used = 533 B / count = 50 / avg = 10 B
 
-# strcache performance: lookups = 76 / hit rate = 27%
+# strcache performance: lookups = 70 / hit rate = 28%
 # hash-table stats:
-# Load=55/8192=1%, Rehash=0, Collisions=0/76=0%
-# Finished Make data base on Sun Aug 28 09:23:09 2022
+# Load=50/8192=1%, Rehash=0, Collisions=0/70=0%
+# Finished Make data base on Sun Aug 28 22:11:43 2022
 
  

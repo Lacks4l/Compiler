@@ -1,6 +1,11 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/lacksal/git/programming/WIP/PACL'
+cc    -c -o main.o main.c
 gcc -c -g core/IO/ReadWrite.c -o core/IO/ReadWrite.o
+gcc -c -g core/compiler/AST.c -o core/compiler/AST.o
+gcc -c -g core/compiler/lexer.c -o core/compiler/lexer.o
+gcc -c -g core/compiler/parser.c -o core/compiler/parser.o
+gcc -c -g core/compiler/token.c -o core/compiler/token.o
 gcc -c -g core/preprocessor/preprocessor.c -o core/preprocessor/preprocessor.o
 gcc main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/parser.o core/compiler/token.o core/preprocessor/preprocessor.o -g -o a.out
 rm bin.txt

@@ -18,6 +18,6 @@ install:
 
 clean:
 	-rm *.out 
-	-rm $(objects)/*.o
+	-rm $(objects)
 
 link: 
