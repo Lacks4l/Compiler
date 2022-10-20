@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 28 22:11:43 2022
+# Make data base, printed on Wed Oct 19 21:55:02 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpa
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
+VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -73,7 +73,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXfPddmT/agent.1443
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXp6UUfG/agent.1291
 # default
 .SHELLFLAGS := -c
 # environment
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3335
+VSCODE_PID = 40500
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 # environment
@@ -95,7 +95,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1392,unix/gurgi:/tmp/.ICE-unix/1392
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1236,unix/gurgi:/tmp/.ICE-unix/1236
 # automatic
 *F = $(notdir $*)
 # environment
@@ -173,7 +173,9 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 1444
+DEBUGINFOD_URLS = https://debuginfod.archlinux.org 
+# environment
+SSH_AGENT_PID = 1292
 # environment
 _ = /usr/bin/make
 # environment
@@ -191,7 +193,7 @@ HOME = /home/lacksal
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.70.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.72.2-main.sock
 # environment
 XDG_SESSION_ID = 2
 # default
@@ -219,7 +221,7 @@ GDMSESSION = xfce
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=103/1024=10%, Rehash=0, Collisions=7/136=5%
+# Load=104/1024=10%, Rehash=0, Collisions=8/137=6%
 
 # Pattern-specific Variable Values
 
@@ -227,14 +229,13 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# core (device 66307, inode 50727975): 9 files, no impossibilities.
+# core (device 66307, inode 50727975): 8 files, no impossibilities.
 # include: could not be stat'd.
-# . (device 66307, inode 50077697): 11 files, no impossibilities.
-# core/compiler (device 66307, inode 50727969): 8 files, no impossibilities.
-# core/IO (device 66307, inode 50728185): 5 files, no impossibilities.
-# core/preprocessor (device 66307, inode 50727970): 5 files, no impossibilities.
+# . (device 66307, inode 50077697): 13 files, no impossibilities.
+# core/compiler (device 66307, inode 50727969): 14 files, no impossibilities.
+# core/IO (device 66307, inode 50728185): 6 files, no impossibilities.
 
-# 38 files, no impossibilities in 6 directories.
+# 41 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -283,12 +284,7 @@ core/compiler/lexer.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-core/preprocessor/preprocessor.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+ 
 
 # Not a target:
 all:
@@ -298,6 +294,12 @@ all:
 #  File has not been updated.
 
 link:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+core/compiler/list.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -322,8 +324,7 @@ install:
 	make
 	cp ./a.out /usr/local/bin/pacl
 
- 
-a.out: main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/parser.o core/compiler/token.o core/preprocessor/preprocessor.o
+a.out: main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/list.o core/compiler/parser.o core/compiler/token.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -346,12 +347,12 @@ core/compiler/token.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 50 / storage = 533 B / avg = 10 B
-# current buf: size = 8162 B / used = 533 B / count = 50 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 53 / storage = 512 B / avg = 9 B
+# current buf: size = 8162 B / used = 512 B / count = 53 / avg = 9 B
 
-# strcache performance: lookups = 70 / hit rate = 28%
+# strcache performance: lookups = 72 / hit rate = 26%
 # hash-table stats:
-# Load=50/8192=1%, Rehash=0, Collisions=0/70=0%
-# Finished Make data base on Sun Aug 28 22:11:43 2022
+# Load=53/8192=1%, Rehash=0, Collisions=0/72=0%
+# Finished Make data base on Wed Oct 19 21:55:02 2022
 
  

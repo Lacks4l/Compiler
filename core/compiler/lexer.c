@@ -10,6 +10,7 @@ lexer_T* init_lexer(char* buff){
     lexer->i = 0;
     lexer->c = lexer->contents[lexer->i];
     return lexer;
+
 }
 
 lexer_T* lexer_advance(lexer_T* lexer){
@@ -17,10 +18,15 @@ lexer_T* lexer_advance(lexer_T* lexer){
     lexer->c = lexer->contents[lexer->i];
 }
 
-void lexer_skip(lexer_T* lexer){
+char lexer_peak(lexer_T* lexer){
+    return lexer->contents[lexer->i+1];
+}
+
+lexer_T* lexer_skip(lexer_T* lexer){
     while(lexer->c!=10){
         lexer_advance(lexer);
     }
+    lexer_advance(lexer);
 }
 
 char* to_string(lexer_T* lexer){
@@ -70,15 +76,16 @@ token_T* lexer_collect_string(lexer_T* lexer){
 
 //Function Call for Lexer in Parser
 token_T* advance_lexer(lexer_T* lexer){
-    while(lexer->c==' '||lexer->c==10){
+    while(lexer->c==' '||lexer->c=='\n'||lexer->c=='\t'){
         lexer_advance(lexer);
     }
 
-    if(lexer->c=='/'&&lexer->contents[lexer->i+1]=='/'){
+    if(lexer->c=='/'&&lexer_peak(lexer)=='/'){
         lexer_skip(lexer);
     }
 
     if(lexer->c=='\"'||lexer->c=='\''){
+        //printf("\n%d\n", lexer_collect_string(lexer)->type);
         return lexer_collect_string(lexer);
     }
 

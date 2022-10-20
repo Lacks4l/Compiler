@@ -61,7 +61,8 @@ typedef struct TOKENS_STRUCT{
         TOKEN_VECTOR,           //43
 
         /* OTHER */
-        TOKEN_IDENTIFIER        //44
+        TOKEN_IDENTIFIER,        //44
+        TOKEN_FUNCTION          //45
     }type;
     char* value;
 

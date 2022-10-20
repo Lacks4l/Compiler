@@ -21,5 +21,6 @@ char* read_file(char* file_name){
 }
 
 void write_file(const char* file_name, char* buff){
-    
+    FILE* fptr = fopen(file_name, "w");
+    fprintf(fptr, "%s", buff);
 }

@@ -13,6 +13,7 @@ AST_T* init_ast(int type){
 
     // AST FUNCTION CALL
     ast->function_call_name = (void*)0;
+    ast->function_call_argument = (void*)0;
     ast->function_call_arguments = (void*)0;
     ast->function_call_argument_size = 0;
 
@@ -25,4 +26,8 @@ AST_T* init_ast(int type){
     // AST COMPOUND
     ast->compound_value = (void*)0;
     ast->compound_size = 0;
+
+    if(type == AST_COMP0UND){
+        ast->children = init_list(sizeof(struct AST_STRUCT*));
+    }
 }

@@ -1,4 +1,9 @@
+//cooment 
 float this_is_cool = 4.4;
+int number = 5;
+//this is a comment
 string test = "LACKSAL";
-int num = 10;
+int num = 69;
 char thing = 'c';
+
+int funct_name(int arg);
