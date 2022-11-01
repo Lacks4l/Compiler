@@ -212,7 +212,6 @@ AST_T* parser_parse_function_dec(parser_T* parser){
         while(parser->current_token->type != TOKEN_RPAREN){     
             function_definition->function_call_arguments[function_definition->function_call_argument_size] = parser_parse_function_argument(parser);
             printf("\n%s\n", parser->current_token->value);
-
             function_definition->function_call_argument_size++;
         
             if(parser->current_token->type == TOKEN_COMMA){
