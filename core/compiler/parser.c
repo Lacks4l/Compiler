@@ -13,11 +13,13 @@ parser_T* init_parser(lexer_T* lexer){
 }
 
 void parser_eat(parser_T* parser, int token_type){
-    printf("%s, %d, %d\n", parser->current_token->value, parser->current_token->type, token_type);
+    printf("%s, %d\n", parser->current_token->value, parser->current_token->type);
     if(parser->current_token->type==token_type){    
         parser->current_token = advance_lexer(parser->lexer);
     }else{
-        printf("Unexpected token %s with type %d", parser->current_token->value, parser->current_token->type);
+    printf("bork %s", token_type);
+
+        printf("Unexpected token %s with type %d\n", parser->current_token->value, parser->current_token->type);
         exit(1);
     }
 }   
@@ -130,7 +132,6 @@ parser_T* parser_parse_term(parser_T* parser){
                 return parser;
             }
         }
-        printf("%d ", num);
         if(num = strlen(parser->current_token->value)){
             parser->current_token->type = TOKEN_INTCONST;
             return parser;
@@ -160,10 +161,9 @@ AST_T* parser_parse_variable_def(parser_T* parser){
     if(parser->current_token->type == TOKEN_LPAREN){
         return parser_parse_function_dec(parser);
     }
+
     parser_eat(parser, TOKEN_EQUALS);
     AST_T* variable_definition_value = parser_parse_expression(parser_parse_term(parser)); //variable value 
-
-    //printf("%s, %d\n", variable_definition_value->int_value, variable_definition_value->type);
 
     AST_T* variable_definition = init_ast(AST_VARIABLE_DEFINITION);  
     variable_definition->variable_def_var_name = variable_definition_var_name;
@@ -187,12 +187,16 @@ AST_T* parser_parse_variable(parser_T* parser){
 }
 
 AST_T* parser_parse_function_argument(parser_T* parser){
-    parser_eat(parser, TOKEN_IDENTIFIER);
-    char* argument_definition_arg_name = parser->current_token->value;
-    parser_eat(parser, TOKEN_IDENTIFIER);
+    //parser_eat(parser, TOKEN_IDENTIFIER); //arg type
+    //char* argument_definition_arg_name = parser->current_token->value;
+    //printf("\n\ndebug %s, %d <- DEBUG\n\n", parser->current_token->value, parser->current_token->type);
+
+    //parser_eat(parser, TOKEN_IDENTIFIER); //arg name
+
+    printf("debug %s", parser->current_token->value);
 
     AST_T* argument_definition = init_ast(AST_ARGUMENT_DEFINITION);
-    argument_definition->function_call_argument = argument_definition_arg_name;
+    //argument_definition->function_call_argument = argument_definition_arg_name;
 
     return argument_definition;
 }
@@ -207,15 +211,17 @@ AST_T* parser_parse_function_dec(parser_T* parser){
         function_definition->function_call_argument_size = 0;
         function_definition->function_call_arguments=(void*)0;
         parser_eat(parser, TOKEN_RPAREN);
-
     }else{
         while(parser->current_token->type != TOKEN_RPAREN){     
+            printf("What");
             function_definition->function_call_arguments[function_definition->function_call_argument_size] = parser_parse_function_argument(parser);
-            printf("\n%s\n", parser->current_token->value);
             function_definition->function_call_argument_size++;
         
+            printf("%s", parser->current_token->value);
+
             if(parser->current_token->type == TOKEN_COMMA){
                 parser_eat(parser, TOKEN_COMMA);
+                continue;
             }
         }
         parser_eat(parser, TOKEN_RPAREN);
@@ -223,7 +229,7 @@ AST_T* parser_parse_function_dec(parser_T* parser){
     return function_definition;
 }
 
-AST_T* parser_parse_function_def(parser_T* parser){
+AST_T* patrser_parse_function_def(parser_T* parser){
     parser_eat(parser, TOKEN_IDENTIFIER);
     char* function_definition_func_name = parser->current_token->value;
     parser_eat(parser, TOKEN_IDENTIFIER);

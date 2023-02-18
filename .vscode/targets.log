@@ -1,14 +1,14 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
-# GNU Make 4.3
+# GNU Make 4.4
 # Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2020 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# Copyright (C) 1988-2022 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov  1 14:42:33 2022
+# Make data base, printed on Sat Feb 18 16:16:00 2023
 
 # Variables
 
@@ -25,7 +25,7 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CWD = /home/lacksal/git/programming/WIP/PACL
 # environment
-WINDOWID = 69206027
+WINDOWID = 98566155
 # environment
 LC_ADDRESS = en_US.UTF-8
 # environment
@@ -55,7 +55,7 @@ OLDPWD = /home/lacksal/git/programming/WIP
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
+VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -65,7 +65,7 @@ XAUTHORITY = /home/lacksal/.Xauthority
 # default
 .LOADED := 
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+.INCLUDE_DIRS := /usr/local/include /usr/include
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -77,7 +77,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXKu0nUg/agent.1289
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXaw3g0p/agent.1264
 # default
 .SHELLFLAGS := -c
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 41468
+VSCODE_PID = 11709
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 # environment
@@ -99,7 +99,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1234,unix/gurgi:/tmp/.ICE-unix/1234
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1209,unix/gurgi:/tmp/.ICE-unix/1209
 # automatic
 *F = $(notdir $*)
 # environment
@@ -143,7 +143,7 @@ LC_TELEPHONE = en_US.UTF-8
 # automatic
 ?F = $(notdir $?)
 # makefile (from 'Makefile', line 1)
-exec = a.out
+exec = pacl
 # environment
 XDG_SEAT = seat0
 # environment
@@ -165,7 +165,7 @@ LOGNAME = lacksal
 # environment
 XDG_VTNR = 7
 # makefile
-.DEFAULT_GOAL := a.out
+.DEFAULT_GOAL := pacl
 # environment
 EDITOR = /usr/bin/nano
 # environment
@@ -175,13 +175,13 @@ GTK_MODULES = canberra-gtk-module:canberra-gtk-module
 # environment
 USER = lacksal
 # default
-MAKE_VERSION := 4.3
+MAKE_VERSION := 4.4
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.archlinux.org 
 # environment
-SSH_AGENT_PID = 1290
+SSH_AGENT_PID = 1265
 # environment
 _ = /usr/bin/make
 # environment
@@ -201,7 +201,7 @@ HOME = /home/lacksal
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.72.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.75.1-main.sock
 # environment
 TERM = xterm-256color
 # environment
@@ -219,11 +219,11 @@ VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
-VTE_VERSION = 6800
+VTE_VERSION = 7002
 # environment
 XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/lacksal
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink guile load
 # environment
 XDG_MENU_PREFIX = xfce-
 # makefile (from 'Makefile', line 4)
@@ -233,7 +233,7 @@ GDMSESSION = xfce
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=9/143=6%
+# Load=110/1024=11%, Rehash=0, Collisions=9/146=6%
 
 # Pattern-specific Variable Values
 
@@ -243,11 +243,11 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # core (device 66307, inode 50727975): 8 files, no impossibilities.
 # include: could not be stat'd.
-# . (device 66307, inode 50077697): 13 files, no impossibilities.
+# . (device 66307, inode 50077697): 14 files, no impossibilities.
 # core/compiler (device 66307, inode 50727969): 14 files, no impossibilities.
 # core/IO (device 66307, inode 50728185): 6 files, no impossibilities.
 
-# 41 files, no impossibilities in 5 directories.
+# 42 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -267,7 +267,8 @@ core/IO/ReadWrite.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-10-27 12:23:28.88277211
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-01 10:13:32.924237096
 #  File has been updated.
 #  Successfully updated.
 
@@ -276,6 +277,16 @@ core/compiler/AST.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+pacl: main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/list.o core/compiler/parser.o core/compiler/token.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+ 
+	gcc $(objects) $(flags) -o $(exec)
+	rm bin.txt
+	xxd -b $(exec) >> bin.txt	
 
 clean:
 #  Implicit rule search has not been done.
@@ -334,16 +345,6 @@ install:
 #  recipe to execute (from 'Makefile', line 16):
 	make
 	cp ./a.out /usr/local/bin/pacl
- 
-
-a.out: main.o core/IO/ReadWrite.o core/compiler/AST.o core/compiler/lexer.o core/compiler/list.o core/compiler/parser.o core/compiler/token.o
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 8):
-	gcc $(objects) $(flags) -o $(exec)
-	rm bin.txt
-	xxd -b $(exec) >> bin.txt
 
 # Not a target:
 core/compiler/token.o:
@@ -352,19 +353,19 @@ core/compiler/token.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/32=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/33=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 53 / storage = 512 B / avg = 9 B
-# current buf: size = 8162 B / used = 512 B / count = 53 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 54 / storage = 515 B / avg = 9 B
+# current buf: size = 8162 B / used = 515 B / count = 54 / avg = 9 B
 
-# strcache performance: lookups = 72 / hit rate = 26%
+# strcache performance: lookups = 74 / hit rate = 27%
 # hash-table stats:
-# Load=53/8192=1%, Rehash=0, Collisions=0/72=0%
-# Finished Make data base on Tue Nov  1 14:42:33 2022
+# Load=54/8192=1%, Rehash=0, Collisions=0/74=0%
+# Finished Make data base on Sat Feb 18 16:16:00 2023
 
  

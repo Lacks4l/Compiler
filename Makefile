@@ -1,4 +1,4 @@
-exec = a.out
+exec = pacl
 sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 objects = $(sources:.c=.o)
 flags = -g
@@ -7,7 +7,7 @@ flags = -g
 $(exec): $(objects)
 	gcc $(objects) $(flags) -o $(exec)
 	rm bin.txt
-	xxd -b $(exec) >> bin.txt
+	xxd -b $(exec) >> bin.txt	
 
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
