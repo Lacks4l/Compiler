@@ -34,11 +34,17 @@ typedef struct AST_STRUCT{
     // AST VARIABLE
     char* variable_name;
 
+    // AST FUNCTION DEF
+    char* function_def_type;
+    char* function_def_name;
+    char* function_def_argument;
+    struct AST_STRUCT** function_def_arguments;
+    size_t function_def_argument_size;
+
     // AST FUNCTION CALL
     char* function_call_name;
-    char* function_call_argument;
-    struct AST_STRUCT** function_call_arguments;
-    size_t function_call_argument_size;
+    char* function_call_arguments;
+    
 
     // AST BASIC TYPES
     char* int_value;

@@ -22,5 +22,5 @@ int main(int argc, char** argv){
 //Run program with:
 /*  
 make
-./pacl.out [filepath of .pacl file] -> test/test.pacl  
+./pacl [filepath of .pacl file] -> test/test.pacl  
 */

@@ -71,7 +71,7 @@ token_T* lexer_collect_string(lexer_T* lexer){
 
     lexer_advance(lexer);
 
-    return strlen(str)==2?init_token(str, TOKEN_CHARCONST):init_token(str, TOKEN_STRINGCONST);
+    return strlen(str)==2 ? init_token(str, TOKEN_CHARCONST) : init_token(str, TOKEN_STRINGCONST);
 }
 
 //Function Call for Lexer in Parser
@@ -85,7 +85,6 @@ token_T* advance_lexer(lexer_T* lexer){
     }
 
     if(lexer->c=='\"'||lexer->c=='\''){
-        //printf("\n%d\n", lexer_collect_string(lexer)->type);
         return lexer_collect_string(lexer);
     }
 

@@ -8,14 +8,19 @@ AST_T* init_ast(int type){
     ast->variable_def_var_name = (void*)0;
     ast->variable_def_value = (void*)0;
 
-    // AST VARIABLE
+    // AST VARIABLE CALL
     ast->variable_name = (void*)0;
 
     // AST FUNCTION CALL
+    ast->function_def_type = (void*)0;
+    ast->function_def_name = (void*)0;
+    ast->function_def_arguments = (void*)0;
+    ast->function_def_arguments = (void*)0;
+    ast->function_def_argument_size = 0;
+
+    // AST FUNCTION DEF
     ast->function_call_name = (void*)0;
-    ast->function_call_argument = (void*)0;
     ast->function_call_arguments = (void*)0;
-    ast->function_call_argument_size = 0;
 
     // AST BASIC TYPES
     ast->int_value = (void*)0;

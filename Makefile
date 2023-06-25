@@ -1,7 +1,7 @@
 exec = pacl
 sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 objects = $(sources:.c=.o)
-flags = -g
+flags = -g 
 
 
 $(exec): $(objects)

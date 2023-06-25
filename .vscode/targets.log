@@ -1,14 +1,14 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
-# GNU Make 4.4
+# GNU Make 4.4.1
 # Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2022 Free Software Foundation, Inc.
+# Copyright (C) 1988-2023 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Feb 21 17:10:15 2023
+# Make data base, printed on Sun Jun 25 10:23:34 2023
 
 # Variables
 
@@ -23,9 +23,11 @@ LC_NAME = en_US.UTF-8
 # environment
 LC_NUMERIC = en_US.UTF-8
 # environment
-VSCODE_CWD = /home/lacksal
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-WINDOWID = 12582923
+VSCODE_CWD = /home/lacksal/git/programming/WIP/PACL
+# environment
+WINDOWID = 56623115
 # environment
 LC_ADDRESS = en_US.UTF-8
 # environment
@@ -47,13 +49,15 @@ PWD = /home/lacksal/git/programming/WIP/PACL
 # environment
 MAIL = /var/spool/mail/lacksal
 # environment
-XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/usr/share
+XDG_DATA_DIRS = /home/lacksal/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+# environment
+OLDPWD = /home/lacksal/git/programming/WIP
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
+VSCODE_CODE_CACHE_PATH = /home/lacksal/.config/Code/CachedData/695af097c7bd098fbf017ce3ac85e09bbc5dda06
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -75,7 +79,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXxV9O74/agent.1514
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXiE6m4I/agent.1507
 # default
 .SHELLFLAGS := -c
 # environment
@@ -89,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 4165
+VSCODE_PID = 3447
 # makefile (from 'Makefile', line 2)
 sources = $(wildcard main.c)  $(wildcard core/*/*.c)
 # environment
@@ -97,7 +101,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1459,unix/gurgi:/tmp/.ICE-unix/1459
+SESSION_MANAGER = local/gurgi:@/tmp/.ICE-unix/1446,unix/gurgi:/tmp/.ICE-unix/1446
 # automatic
 *F = $(notdir $*)
 # environment
@@ -109,7 +113,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","osLocale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile
@@ -136,6 +140,8 @@ MOTD_SHOWN = pam
 ^F = $(notdir $^)
 # environment
 LC_TIME = en_US.UTF-8
+# environment
+GRADLE_HOME = /usr/share/java/gradle
 # environment
 LC_TELEPHONE = en_US.UTF-8
 # automatic
@@ -173,13 +179,13 @@ GTK_MODULES = canberra-gtk-module:canberra-gtk-module
 # environment
 USER = lacksal
 # default
-MAKE_VERSION := 4.4
+MAKE_VERSION := 4.4.1
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.archlinux.org 
 # environment
-SSH_AGENT_PID = 1515
+SSH_AGENT_PID = 1508
 # environment
 _ = /usr/bin/make
 # environment
@@ -199,7 +205,7 @@ HOME = /home/lacksal
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.75.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1d7b1202-1.79-main.sock
 # environment
 TERM = xterm-256color
 # environment
@@ -217,7 +223,7 @@ VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
-VTE_VERSION = 7002
+VTE_VERSION = 7201
 # environment
 XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/lacksal
 # default
@@ -225,13 +231,13 @@ XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/lacksal
 # environment
 XDG_MENU_PREFIX = xfce-
 # makefile (from 'Makefile', line 4)
-flags = -g
+flags = -g 
 # environment
 GDMSESSION = xfce
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=9/145=6%
+# Load=112/1024=11%, Rehash=0, Collisions=9/144=6%
 
 # Pattern-specific Variable Values
 
@@ -242,10 +248,10 @@ LC_IDENTIFICATION = en_US.UTF-8
 # core (device 66307, inode 50727975): 8 files, no impossibilities.
 # include: could not be stat'd.
 # . (device 66307, inode 50077697): 14 files, no impossibilities.
-# core/compiler (device 66307, inode 50727969): 12 files, no impossibilities.
-# core/IO (device 66307, inode 50728185): 5 files, no impossibilities.
+# core/compiler (device 66307, inode 50727969): 14 files, no impossibilities.
+# core/IO (device 66307, inode 50728185): 6 files, no impossibilities.
 
-# 39 files, no impossibilities in 5 directories.
+# 42 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -266,7 +272,7 @@ core/IO/ReadWrite.o:
 Makefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-01 10:13:32.924237096
+#  Last modified 2023-02-25 15:31:46.306967515
 #  File has been updated.
 #  Successfully updated.
 
@@ -291,6 +297,7 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 20):
 	-rm *.out 
+ 
 	-rm $(objects)
 
 # Not a target:
@@ -299,7 +306,6 @@ core/compiler/lexer.o:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
@@ -358,12 +364,12 @@ core/compiler/token.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 51 / storage = 486 B / avg = 9 B
-# current buf: size = 8162 B / used = 486 B / count = 51 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 55 / storage = 521 B / avg = 9 B
+# current buf: size = 8162 B / used = 521 B / count = 55 / avg = 9 B
 
-# strcache performance: lookups = 71 / hit rate = 28%
+# strcache performance: lookups = 73 / hit rate = 24%
 # hash-table stats:
-# Load=51/8192=1%, Rehash=0, Collisions=0/71=0%
-# Finished Make data base on Tue Feb 21 17:10:15 2023
+# Load=55/8192=1%, Rehash=0, Collisions=0/73=0%
+# Finished Make data base on Sun Jun 25 10:23:34 2023
 
  
