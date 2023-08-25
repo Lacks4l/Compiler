@@ -13,13 +13,14 @@ parser_T* init_parser(lexer_T* lexer){
 }
 
 void parser_eat(parser_T* parser, int token_type){
-    printf("%s, %d\n", parser->current_token->value, parser->current_token->type);
+    printf("%d, %d -> ", parser->current_token->type, token_type);
     if(parser->current_token->type==token_type){    
+        printf("%s, %d\n", parser->current_token->value, parser->current_token->type);
         parser->current_token = advance_lexer(parser->lexer);
     }else{
-    printf("bork %s", token_type);
+        printf("%s, %d\n", parser->current_token->value, parser->current_token->type);
 
-        printf("Unexpected token %s with type %d\n", parser->current_token->value, parser->current_token->type);
+        printf("Unexpected token \"%s\" with type %d\n", parser->current_token->value, parser->current_token->type);
         exit(1);
     }
 }   
@@ -56,15 +57,15 @@ AST_T* parser_parse_statements(parser_T* parser){
 }
 
 AST_T* parser_parse_identifier(parser_T* parser){
-    if(TOKEN_INT >= parser->current_token->type <= TOKEN_CHAR){
-        return parser_parse_variable_def(parser);
+    if(strcmp(parser->current_token->value, "fn") == 0) {
+        printf("Function!!!! \n");
+        return parser_parse_function_dec(parser);
+
     }else{
-        if(parser->current_token->type == TOKEN_FUNCTION){
-            printf("\nHERE\n");
-            return parser_parse_function_dec(parser);
-        }
-        return parser_parse_variable(parser); 
+        printf("Variable!!!! \n");
+        return parser_parse_variable_def(parser);        
     }
+    return parser_parse_variable(parser); 
 }
 
 AST_T* parser_parse_int(parser_T* parser){
@@ -157,19 +158,13 @@ AST_T* parser_parse_expression(parser_T* parser){
 AST_T* parser_parse_variable_def(parser_T* parser){
     parser_eat(parser, TOKEN_IDENTIFIER); //variable type
     char* variable_definition_var_name = parser->current_token->value;
-
-    printf("\n\ncurrent token->%s\n\n", parser->current_token->value);
-
     parser_eat(parser, TOKEN_IDENTIFIER); //variable name
 
     AST_T* variable_definition_value = init_ast(AST_VARIABLE_DEFINITION);
 
-    if(parser->current_token->type == TOKEN_LPAREN){
-        //not working as the function name is never being passed
-        return parser_parse_function_dec(parser);
-    }else if(parser->current_token->type == TOKEN_EQUALS){
+    if(parser->current_token->type == TOKEN_EQUALS){
         parser_eat(parser, TOKEN_EQUALS);
-        AST_T* variable_definition_value = parser_parse_expression(parser_parse_term(parser)); //variable value 
+        variable_definition_value = parser_parse_expression(parser_parse_term(parser)); //variable value 
 
         AST_T* variable_definition = init_ast(AST_VARIABLE_DEFINITION);  
         variable_definition->variable_def_var_name = variable_definition_var_name;
@@ -194,36 +189,43 @@ AST_T* parser_parse_variable(parser_T* parser){
 }
 
 AST_T* parser_parse_function_argument_def(parser_T* parser){
+    char* argument_definition_arg_type = parser->current_token->value;
+    parser_eat(parser, TOKEN_IDENTIFIER); // Argument Type
     char* argument_definition_arg_name = parser->current_token->value;
-    parser_eat(parser, TOKEN_IDENTIFIER); //arg type
-    parser_eat(parser, TOKEN_IDENTIFIER); //arg name
+    parser_eat(parser, TOKEN_IDENTIFIER); // Argument Name
 
     AST_T* argument_definition = init_ast(AST_ARGUMENT_DEFINITION);
-    argument_definition->function_def_argument = argument_definition_arg_name;
 
+    argument_definition->argument_def_type = argument_definition_arg_type;  
+    argument_definition->argument_def_name = argument_definition_arg_name;
     return argument_definition;
 }
 
 AST_T* parser_parse_function_dec(parser_T* parser){
-    printf("%s\n", parser->current_token->value);
+    parser_eat(parser, TOKEN_IDENTIFIER); // Function Token
     AST_T* function_definition = init_ast(AST_FUNCTION_DEF);
+    parser_eat(parser, TOKEN_IDENTIFIER); // Function Type
+    char* function_dec_function_type = parser->current_token->value;
+    parser_eat(parser, TOKEN_IDENTIFIER); // Function Name
+    char* function_dec_function_name = parser->current_token->value;
 
     parser_eat(parser, TOKEN_LPAREN);
-    
+
+    AST_T* argument = init_ast(AST_ARGUMENT_DEFINITION);
+
     if(parser->current_token->type == TOKEN_RPAREN){
         function_definition->function_def_argument_size = 0;
         function_definition->function_def_arguments=(void*)0;
         parser_eat(parser, TOKEN_RPAREN);
     }else{
-        while(parser->current_token->type != TOKEN_RPAREN){     
-            function_definition->function_def_arguments[function_definition->function_def_argument_size] = parser_parse_function_argument_def(parser);
-
-            printf("\n\nTEST %s, %d <- test\n\n", parser->current_token->value, parser->current_token->type);
-            
+        while(parser->current_token->type != TOKEN_RPAREN){  
+            printf("\n%d\n", sizeof(function_definition->function_def_arguments));
+            argument = parser_parse_function_argument_def(parser);     //This is the problem 
+            printf("WHAT4\n");      
+            function_definition->function_def_arguments[function_definition->function_def_argument_size] = argument;
             function_definition->function_def_argument_size++;
         
             if(parser->current_token->type == TOKEN_COMMA){
-                printf("WHAT IS WRONG WITH THIS\n\n");
                 parser_eat(parser, TOKEN_COMMA);
                 continue;
         }

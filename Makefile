@@ -5,19 +5,16 @@ flags = -g
 
 
 $(exec): $(objects)
-	gcc $(objects) $(flags) -o $(exec)
-	rm bin.txt
-	xxd -b $(exec) >> bin.txt	
+	gcc $(objects) $(flags) -o bin/$(exec)
+	xxd -b bin/$(exec) >> bin/bin.txt	
 
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
 install:
 	make
-	cp ./a.out /usr/local/bin/pacl
+	cp bin/pacl /usr/local/bin/pacl
 
 clean:
-	-rm *.out 
+	-rm bin/*
 	-rm $(objects)
-
-link: 

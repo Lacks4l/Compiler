@@ -14,8 +14,8 @@ AST_T* init_ast(int type){
     // AST FUNCTION CALL
     ast->function_def_type = (void*)0;
     ast->function_def_name = (void*)0;
-    ast->function_def_arguments = (void*)0;
-    ast->function_def_arguments = (void*)0;
+    ast->argument_def_type = (void*)0;
+    ast->argument_def_name = (void*)0;
     ast->function_def_argument_size = 0;
 
     // AST FUNCTION DEF
