@@ -36,3 +36,4 @@ AST_T* init_ast(int type){
         ast->children = init_list(sizeof(struct AST_STRUCT*));
     }
 }
+

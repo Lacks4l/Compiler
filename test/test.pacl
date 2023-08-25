@@ -7,4 +7,4 @@ char thing = 'c';
 
 
 int num = 100;
-fn int funct_name(int arg);
+fn int funct_name(int arg, float arg2);
