@@ -16,6 +16,9 @@ Lexer gives each character or character group a basic numerical identifier so th
     A. Go char by char and split into tokens (EG: all "punctuation" gets a specfic token to denote its type.  Multi-character tokens provide a much more difficult challenge. Everything that isnt a constant (as in a variable declaration value) is passed into the parser as an identifier.)
 
 3. Parse File
-    A. Oh man I don't even know at this point. 
-    B. I think you take the TOKEN_IDENTIFIERS and give the meaning (eg, int, double, function, etc)
+    A. Take the output tokens, and sort them into the AST
+
+4. Semantic Analysis (scope)
+    A. Now this im really not too sure about.
+    B. I beleive I perform syntactical checks at this stage
 
